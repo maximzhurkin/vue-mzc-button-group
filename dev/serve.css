@@ -1,0 +1,19 @@
+html, body, #app {
+	margin: 0;
+	padding: 0;
+  height: 100%;
+	background-color: #22272E;
+}
+#app {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row:not(:last-child) {
+	margin-bottom: 24px;
+}
+.vue-mzc-button-group__button--active:not(:first-child) {
+	border-left-color: #22272E;
+}
