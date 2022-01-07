@@ -36,3 +36,14 @@ export default {
 <vue-mzc-button-group :options="options" v-model="oneSelected" />
 <vue-mzc-button-group :options="options" multiple v-model="manySelected" />
 ```
+## Customize
+```css
+.vue-mzc-button-group {
+  --vue-mzc-button-group-padding: 16px;
+  --vue-mzc-button-group-height: 32px;
+  --vue-mzc-button-group-border-width: 1px;
+  --vue-mzc-button-group-border-radius: 6px;
+  --vue-mzc-button-group-primary-color: #0075ff;
+  --vue-mzc-button-group-background-color: #ffffff;
+}
+```

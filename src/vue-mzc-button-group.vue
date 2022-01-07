@@ -1,6 +1,6 @@
 <script>
 export default /*#__PURE__*/ {
-  name: "VueMzcButtonGroup", // vue component name
+  name: "VueMzcButtonGroup",
   props: {
     value: {
       type: [String, Number, Array],
@@ -68,3 +68,65 @@ export default /*#__PURE__*/ {
     </button>
   </div>
 </template>
+
+<style>
+:root {
+  --vue-mzc-button-group-padding: 16px;
+  --vue-mzc-button-group-height: 32px;
+  --vue-mzc-button-group-border-width: 1px;
+  --vue-mzc-button-group-border-radius: 6px;
+  --vue-mzc-button-group-primary-color: #0075ff;
+  --vue-mzc-button-group-background-color: #ffffff;
+}
+.vue-mzc-button-group {
+  display: flex;
+}
+.vue-mzc-button-group__button {
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-left: var(--vue-mzc-button-group-padding);
+  padding-right: var(--vue-mzc-button-group-padding);
+  display: block;
+  height: var(--vue-mzc-button-group-height);
+  font-size: 1em;
+  font-weight: 700;
+  color: #0075ff;
+  color: var(--vue-mzc-button-group-primary-color);
+  background-color: #ffffff;
+  background-color: var(--vue-mzc-button-group-background-color);
+  border-width: 1px;
+  border-width: var(--vue-mzc-button-group-border-width);
+  border-color: #0075ff;
+  border-color: var(--vue-mzc-button-group-primary-color);
+  border-style: solid;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+    border-color 0.25s ease-in-out;
+}
+.vue-mzc-button-group__button:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: var(--vue-mzc-button-group-border-radius);
+  border-bottom-left-radius: var(--vue-mzc-button-group-border-radius);
+}
+.vue-mzc-button-group__button:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: var(--vue-mzc-button-group-border-radius);
+  border-bottom-right-radius: var(--vue-mzc-button-group-border-radius);
+}
+.vue-mzc-button-group__button:not(:first-child) {
+  margin-left: -1px;
+  margin-left: calc(-1 * var(--vue-mzc-button-group-border-width));
+}
+.vue-mzc-button-group__button--active {
+  color: #ffffff;
+  color: var(--vue-mzc-button-group-background-color);
+  background-color: #0075ff;
+  background-color: var(--vue-mzc-button-group-primary-color);
+}
+.vue-mzc-button-group__button--active:not(:first-child) {
+  border-left-color: #ffffff;
+  border-left-color: var(--vue-mzc-button-group-background-color);
+}
+</style>

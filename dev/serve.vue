@@ -1,7 +1,6 @@
 <script>
 import Vue from 'vue';
 import VueMzcButtonGroup from '@/vue-mzc-button-group.vue';
-import "../src/vue-mzc-button-group.css";
 import "./serve.css";
 
 export default Vue.extend({
